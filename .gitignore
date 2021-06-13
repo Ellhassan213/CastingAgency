@@ -18,4 +18,4 @@ package-lock.json
 *package.json
 .env
 
-/starter/__pycache__/
+/__pycache__/
