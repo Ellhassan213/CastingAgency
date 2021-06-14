@@ -7,6 +7,7 @@ from dotenv import load_dotenv
 import os
 
 
+# Load environment variables
 AUTH0_DOMAIN = os.environ.get("AUTH0_DOMAIN")
 ALGORITHMS = os.environ.get("ALGORITHMS")
 API_AUDIENCE = os.environ.get("API_AUDIENCE")
@@ -83,7 +84,7 @@ check_permissions(permission, payload) method
         payload: decoded jwt payload
 
     Raises an AuthError if permissions are not included in the payload
-        !!NOTE check RBAC settings in Auth0
+        RBAC settings in Auth0 must be configured correctly
     Raises an AuthError if the requested permission string is not in the payload permissions array
     return true otherwise
 '''

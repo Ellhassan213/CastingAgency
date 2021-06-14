@@ -9,7 +9,7 @@ from auth import ASSISTANT_TOKEN, DIRECTOR_TOKEN, PRODUCER_TOKEN
 
 
 class CastingAgencyTestCase(unittest.TestCase):
-    """This class represents the Casting Agency test case"""
+    """This class represents the Casting Agency test case - Running tests locally"""
 
     def setUp(self):
         """Define test variables and initialize app."""
@@ -20,6 +20,7 @@ class CastingAgencyTestCase(unittest.TestCase):
             os.environ.get("DB_HOST"), self.database_name)
         setup_db(self.app, self.database_path)
 
+        # Creating movie and actor test data 
         self.new_movie = {
             "title": "Mission Impossible",
             "release_date": "1996-11-20"
@@ -40,6 +41,7 @@ class CastingAgencyTestCase(unittest.TestCase):
             "gender_flawed": 'Male'
         }
 
+        # Fetching and formatting auth tokens
         self.assistant_header = {
             'Authorization': 'Bearer {}'.format(ASSISTANT_TOKEN)
         }
@@ -92,6 +94,7 @@ class CastingAgencyTestCase(unittest.TestCase):
         self.assertEqual(data['success'], False)
         self.assertEqual(data['message'], 'bad request')
 
+    # Director should not be allowed to post movies as per requirements
     def test_post_movies_401_not_authorized(self):
         res = self.client().post('/movies', json=self.new_movie, headers=self.director_header)
         data = json.loads(res.data)
@@ -112,6 +115,7 @@ class CastingAgencyTestCase(unittest.TestCase):
         self.assertEqual(res.status_code, 404)
         self.assertEqual(data['success'], False)
 
+    # Create new movie and test deletion success
     def test_delete_movie_success(self):
         create_res = self.client().post('/movies', json=self.new_movie,
                                         headers=self.producer_header)
@@ -161,6 +165,7 @@ class CastingAgencyTestCase(unittest.TestCase):
         self.assertEqual(data['success'], False)
         self.assertEqual(data['message'], 'bad request')
 
+    # Assistant should not be allowed to post actors as per requirements
     def test_post_actors_401_not_authorized(self):
         res = self.client().post('/actors', json=self.new_actor,
                                  headers=self.assistant_header)
@@ -182,6 +187,7 @@ class CastingAgencyTestCase(unittest.TestCase):
         self.assertEqual(res.status_code, 404)
         self.assertEqual(data['success'], False)
 
+    # Create new actor and test deletion success
     def test_delete_actor_success(self):
         create_res = self.client().post('/actors', json=self.new_actor,
                                         headers=self.director_header)
