@@ -38,32 +38,11 @@ With Postgres running, restore a database using the test_db.psql file provided. 
 psql casting_agency_db < test_db.psql
 ```
 
-## Running the server
-
-From within the `CastingAgency` directory first ensure you are working using your created virtual environment.
-
-To run the server, execute:
-
-```bash
-export FLASK_APP=app,py
-export FLASK_ENV=development
-flask run
-```
-
-Setting the `FLASK_ENV` variable to `development` will detect file changes and restart the server automatically.
-
-Setting the `FLASK_APP` variable to `app.py` directs flask to use the `CastingAgency` directory and the `app.py` file to find the application. 
-
-#### Base URL
-
-The app can be run locally, hosted at default http://127.0.0.1:5000/
-The App is also deployed on Heroku, default at https://lawalcastingagency.herokuapp.com
-
-#### API Keys/Authentication
+## API Keys/Authentication
 
 This application is utilising Auth0 for Authentication.
 
-## Auth0 Setup
+#### Auth0 Setup
 1. Create an Auth0 account or use an existing one if you wish
 2. Choose a unique tenant domain
 3. Create a new Single Page Application for the Casting Agency
@@ -363,6 +342,44 @@ curl -X DELETE http://127.0.0.1:5000/actor/3
 }
 ```
 
+## Running the server - Locally and on Heroku
+
+### Auth Tokens
+TBD...
+
+### Run Locally
+
+From within the `CastingAgency` directory first ensure you are working using your created virtual environment.
+
+To run the server, execute:
+
+```bash
+source setup.sh
+export FLASK_APP=app.py
+export FLASK_ENV=development
+flask run
+```
+
+Setting the `FLASK_ENV` variable to `development` will detect file changes and restart the server automatically.
+
+Setting the `FLASK_APP` variable to `app.py` directs flask to use the `CastingAgency` directory and the `app.py` file to find the application. 
+
+#### Base URL
+
+```bash
+The app can be run locally, hosted at default http://127.0.0.1:5000/
+```
+
+### Heroku
+To deploy this app on Heroku, please follow standard guidance on Heroku official website.
+To run the already deployed application, follow Base URL link
+
+#### Base URL
+
+```bash
+The App is deployed on Heroku, default at https://lawalcastingagency.herokuapp.com
+```
+
 ## Testing
 
 #### General
@@ -389,4 +406,4 @@ psql casting_agency_db_test < test_db.psql
 python test_app.py
 ```
 
-## Deployment - HEROKU 
+
