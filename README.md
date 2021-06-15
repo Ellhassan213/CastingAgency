@@ -12,7 +12,7 @@ Follow instructions to install the latest version of python for your platform in
 
 #### Virtual Environment
 
-We recommend working within a virtual environment whenever using Python for projects. This keeps your dependencies for each project separate and organized. Instructions for setting up a virtual environment for your platform can be found in the [python docs](https://packaging.python.org/guides/installing-using-pip-and-virtual-environments/)
+I recommend working within a virtual environment whenever using Python for projects. This keeps your dependencies for each project separate and organized. Instructions for setting up a virtual environment for your platform can be found in the [python docs](https://packaging.python.org/guides/installing-using-pip-and-virtual-environments/)
 
 #### PIP Dependencies
 
@@ -33,7 +33,7 @@ This will install all of the required packages we selected within the `requireme
 - [Flask-CORS](https://flask-cors.readthedocs.io/en/latest/#) is the extension we'll use to handle cross origin requests from our frontend server. 
 
 ## Database Setup
-With Postgres running, restore a database using the test_db.psql file provided. From the CastingAgency folder in terminal run:
+With Postgres running, restore a database using the `test_db.psql` file provided. From the `CastingAgency` folder in terminal, run:
 ```bash
 psql casting_agency_db < test_db.psql
 ```
@@ -48,8 +48,8 @@ This application is utilising Auth0 for Authentication.
 3. Create a new Single Page Application for the Casting Agency
 4. Create a new API for the Casting Agency
   - Navigate to API Settings
-    1. Enable "RBAC"
-    2. Enable "Add Permissions in the Access Token"
+    1. Enable `RBAC`
+    2. Enable `Add Permissions in the Access Token`
     3. Set Token Expiration and Token Expiration for Browser Flows to desired values
 5. Navigate to API Permissions tab and create permissions below
 ```bash
@@ -62,7 +62,7 @@ This application is utilising Auth0 for Authentication.
   - post:actor
   - patch:actor
 ```
-6. Go to User Management -> Roles: Create the following roles
+6. Go to User Management, then Roles: Create the following roles:
   - Casting Assistant
     - Can `get:movies` and `get:actors`
   - Casting Director
@@ -75,7 +75,7 @@ This application is utilising Auth0 for Authentication.
 
 7. Go to User Management -> Users
   - Create 3 seperate users
-  - Assign each user with a role from step 6
+  - Assign each user with a role from `step 6`
 
 ## Error Handling
 
@@ -99,7 +99,7 @@ The app will return the following error types when request fail:
 
 ## Resource Endpoints
 
-You can test endpoints using Curl, Postman or through the unit test integrated in the application.
+You can test endpoints using `Curl`, `Postman` or through the `Unit Test` integrated in the application.
 The example requests provided using Curl were achieved by testing without the authentication layer.
 A more complete test should be done using the other two methods.
 
@@ -345,7 +345,13 @@ curl -X DELETE http://127.0.0.1:5000/actor/3
 ## Running the server - Locally and on Heroku
 
 ### Auth Tokens
-TBD...
+To test this application, you would need yours or my user auth0 tokens. For mine, see details already defined in `setup.sh`. 
+
+#### Raw Data
+
+Please see `Tokens.txt`. 
+
+New Tokens available upon request
 
 ### Run Locally
 
