@@ -359,28 +359,18 @@ export FLASK_APP=app.py
 export FLASK_ENV=development
 flask run
 ```
-
-Setting the `FLASK_ENV` variable to `development` will detect file changes and restart the server automatically.
-
-Setting the `FLASK_APP` variable to `app.py` directs flask to use the `CastingAgency` directory and the `app.py` file to find the application. 
-
-#### Base URL
-
-```bash
 The app can be run locally, hosted at default http://127.0.0.1:5000/
-```
+
+Setting the `FLASK_ENV` variable to `development` will detect file changes and restart the server automatically
+
+Setting the `FLASK_APP` variable to `app.py` directs flask to use the `CastingAgency` directory and the `app.py` file to find the application
 
 ### Heroku
 To deploy this app on Heroku, please follow standard guidance on Heroku official website.
-To run the already deployed application, follow Base URL link
+To run the already deployed application, follow Base URL link.
+The App is deployed on Heroku, default at `https://lawalcastingagency.herokuapp.com`
 
-#### Base URL
-
-```bash
-The App is deployed on Heroku, default at https://lawalcastingagency.herokuapp.com
-```
-
-## Testing
+## Testing Locally
 
 #### General
 Each endpoint is tested for successful and unsuccessful execution. Expected outputs are used for validation
@@ -397,7 +387,7 @@ See tests below and feel free to add more useful tests:
 
 Note: There are more actor related tests in test_app.py. The test cases are thesame as movie tests
 
-#### Test Execution
+#### Local Test Execution
 To run the tests, run
 ```
 dropdb casting_agency_db_test
@@ -406,4 +396,9 @@ psql casting_agency_db_test < test_db.psql
 python test_app.py
 ```
 
+## Testing at Live Application Endpoint
+
+You have everything you need from provided information so far, to test the application.
+However, I have made a Postman collection to make it easier and straightforward. 
+Please see `/CastingAgency/CastingAgencyCollection.postman_collection.json`
 
