@@ -43,14 +43,14 @@ psql casting_agency_db < test_db.psql
 This application is utilising Auth0 for Authentication.
 
 #### Auth0 Setup
-1. Create an Auth0 account or use an existing one if you wish
+1. Create an [Auth0](https://auth0.com) account or use an existing one if you wish
 2. Choose a unique tenant domain
 3. Create a new Single Page Application for the Casting Agency
 4. Create a new API for the Casting Agency
   - Navigate to API Settings
     1. Enable "RBAC"
-    2. Enable "Add Permissions in the Access Token
-    3. Set Token Expiration and Token Expiration for Browser Flows to value >= "80,000"
+    2. Enable "Add Permissions in the Access Token"
+    3. Set Token Expiration and Token Expiration for Browser Flows to desired values
 5. Navigate to API Permissions tab and create permissions below
 ```bash
   - get:movies
@@ -64,14 +64,14 @@ This application is utilising Auth0 for Authentication.
 ```
 6. Go to User Management -> Roles: Create the following roles
   - Casting Assistant
-    - Can get:movies and get:actors
+    - Can `get:movies` and `get:actors`
   - Casting Director
     - All permissions a casting assistance has and ...
-    - post:actor or delete:actor
-    - patch:movie or patch:actor
+    - Can `post:actor` or `delete:actor`
+    - Can `patch:movie` or `patch:actor`
   - Executive Producer
     - All permissions a Casting Director has and ...
-    - post:movie or delete:movie
+    - Can `post:movie` or `delete:movie`
 
 7. Go to User Management -> Users
   - Create 3 seperate users
@@ -368,7 +368,7 @@ Setting the `FLASK_APP` variable to `app.py` directs flask to use the `CastingAg
 ### Heroku
 To deploy this app on Heroku, please follow standard guidance on Heroku official website.
 To run the already deployed application, follow Base URL link.
-The App is deployed on Heroku, default at `https://lawalcastingagency.herokuapp.com`
+The App is deployed on Heroku, default at [The Cool Casting Agency](https://lawalcastingagency.herokuapp.com)
 
 ## Testing Locally
 
