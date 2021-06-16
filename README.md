@@ -405,6 +405,6 @@ python test_app.py
 ## Testing at Live Application Endpoint
 
 You have everything you need from provided information so far, to test the application.
-However, I have made a Postman collection to make it easier and straightforward. 
+However, I have made a Postman collection to make it easier and straightforward to play with. 
 Please see `/CastingAgency/CastingAgencyCollection.postman_collection.json`
 

@@ -1,0 +1,1080 @@
+{
+	"info": {
+		"_postman_id": "ee40d8c4-27bf-4c8b-b11d-eeacf16b8f77",
+		"name": "CastingAgencyCollection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Casting Assistant",
+			"item": [
+				{
+					"name": "/movies",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://lawalcastingagency.herokuapp.com/movies",
+							"protocol": "https",
+							"host": [
+								"lawalcastingagency",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"movies"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/actors",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://lawalcastingagency.herokuapp.com/actors",
+							"protocol": "https",
+							"host": [
+								"lawalcastingagency",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"actors"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/movies",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 401\", function () {",
+									"    pm.response.to.have.status(401);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"title\": \"Matix\", \"release_date\": \"1994-06-12\"}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://lawalcastingagency.herokuapp.com/movies",
+							"protocol": "https",
+							"host": [
+								"lawalcastingagency",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"movies"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/actors",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 401\", function () {",
+									"    pm.response.to.have.status(401);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"name\": \"Angela Valdes\", \"age\": \"35\", \"gender\": \"Female\"}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://lawalcastingagency.herokuapp.com/actors",
+							"protocol": "https",
+							"host": [
+								"lawalcastingagency",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"actors"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/movies",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 401\", function () {",
+									"    pm.response.to.have.status(401);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"title\": \"Matix\", \"release_date\": \"1994-06-20\"}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://lawalcastingagency.herokuapp.com/movies/1",
+							"protocol": "https",
+							"host": [
+								"lawalcastingagency",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"movies",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/actors",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 401\", function () {",
+									"    pm.response.to.have.status(401);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"name\": \"Angela Valdes\", \"age\": \"25\", \"gender\": \"Female\"}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://lawalcastingagency.herokuapp.com/actors/1",
+							"protocol": "https",
+							"host": [
+								"lawalcastingagency",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"actors",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/movies",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 401\", function () {",
+									"    pm.response.to.have.status(401);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://lawalcastingagency.herokuapp.com/movies/3",
+							"protocol": "https",
+							"host": [
+								"lawalcastingagency",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"movies",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/actors",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 401\", function () {",
+									"    pm.response.to.have.status(401);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://lawalcastingagency.herokuapp.com/actors/3",
+							"protocol": "https",
+							"host": [
+								"lawalcastingagency",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"actors",
+								"3"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"auth": {
+				"type": "bearer",
+				"bearer": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IkVUTFViNlBsRTM5amVRcjRSRnhHWCJ9.eyJpc3MiOiJodHRwczovL2ZzbmQtbGF3YWwuZXUuYXV0aDAuY29tLyIsInN1YiI6ImF1dGgwfDYwYzU0YjJmMjkyNmI5MDA2OWVlMjgxZiIsImF1ZCI6Imh0dHA6Ly8xMjcuMC4wLjE6NTAwMCIsImlhdCI6MTYyMzg1NzUzMCwiZXhwIjoxNjIzOTM3NTMwLCJhenAiOiI1Y2R6RDBva1NYaWhzMUtzUU11d1JkNDlzQmNqd3ZxUCIsInNjb3BlIjoiIiwicGVybWlzc2lvbnMiOlsiZ2V0OmFjdG9ycyIsImdldDptb3ZpZXMiXX0.LccST9ASU9lb8svT4p238Zu2trOVD2thzhMBuSpIDAmynMUCGkSql_WVJnrksnx-AMj5xa_kA2PtNC-eND4rJNWFfVdF8Ambrmnd2SOQKG9tsqWKGSLzm6yaL2Faah0Dj6O0ocQLyfYneFWfk1KioxK0DPF8-kaNtiDPxjp25Nq74c68AW-8kiP4EjP57QJk8Kj61P8UKJEd6cpOtfpcevNymzVAuxFi1ftE3Mk_SJZSbvgJg0nVczilR1-CXXciqYz-tzmct_e9aZML4vcAz3Z9x6GRkQZz9EMnNUzWVkJc6culd7gAcMWBKgsq93MI6rNN9FLGGUHNlMjPmeiiUw",
+						"type": "string"
+					}
+				]
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "Casting Director",
+			"item": [
+				{
+					"name": "/movies",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://lawalcastingagency.herokuapp.com/movies",
+							"protocol": "https",
+							"host": [
+								"lawalcastingagency",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"movies"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/actors",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://lawalcastingagency.herokuapp.com/actors",
+							"protocol": "https",
+							"host": [
+								"lawalcastingagency",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"actors"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/movies",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 401\", function () {",
+									"    pm.response.to.have.status(401);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"title\": \"Matix\", \"release_date\": \"1994-06-12\"}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://lawalcastingagency.herokuapp.com/movies",
+							"protocol": "https",
+							"host": [
+								"lawalcastingagency",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"movies"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/actors",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"name\": \"Angela Valdes\", \"age\": \"35\", \"gender\": \"Female\"}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://lawalcastingagency.herokuapp.com/actors",
+							"protocol": "https",
+							"host": [
+								"lawalcastingagency",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"actors"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/movies",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"title\": \"Matix\", \"release_date\": \"1994-06-20\"}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://lawalcastingagency.herokuapp.com/movies/1",
+							"protocol": "https",
+							"host": [
+								"lawalcastingagency",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"movies",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/actors",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"name\": \"Angela Valdes\", \"age\": \"25\", \"gender\": \"Female\"}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://lawalcastingagency.herokuapp.com/actors/1",
+							"protocol": "https",
+							"host": [
+								"lawalcastingagency",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"actors",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/movies",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 404\", function () {",
+									"    pm.response.to.have.status(404);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://lawalcastingagency.herokuapp.com/fake-movies/999",
+							"protocol": "https",
+							"host": [
+								"lawalcastingagency",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"fake-movies",
+								"999"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/actors",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 404\", function () {",
+									"    pm.response.to.have.status(404);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://lawalcastingagency.herokuapp.com/fake-actors/3999",
+							"protocol": "https",
+							"host": [
+								"lawalcastingagency",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"fake-actors",
+								"3999"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"auth": {
+				"type": "bearer",
+				"bearer": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IkVUTFViNlBsRTM5amVRcjRSRnhHWCJ9.eyJpc3MiOiJodHRwczovL2ZzbmQtbGF3YWwuZXUuYXV0aDAuY29tLyIsInN1YiI6ImF1dGgwfDYwOWIxZWJiOWU2OGU2MDA3MGQ5YTg4ZSIsImF1ZCI6Imh0dHA6Ly8xMjcuMC4wLjE6NTAwMCIsImlhdCI6MTYyMzg1NzY4MiwiZXhwIjoxNjIzOTM3NjgyLCJhenAiOiI1Y2R6RDBva1NYaWhzMUtzUU11d1JkNDlzQmNqd3ZxUCIsInNjb3BlIjoiIiwicGVybWlzc2lvbnMiOlsiZGVsZXRlOmFjdG9yIiwiZ2V0OmFjdG9ycyIsImdldDptb3ZpZXMiLCJwYXRjaDphY3RvciIsInBhdGNoOm1vdmllIiwicG9zdDphY3RvciJdfQ.UXz6wr_lyc7lvvGjw54CbJOrbf56pgXgHQiLwYyTClvVbVCUUWdOiDIQNyIdLbZHQ3ezR_bOFz7to-4wXFO1dFAApvg1DT5Ns5rMgtTSOWd8MHfxMQU7i41EKaCaJi6Wwze24KdnG3uagSYippFUjnkquhuhuqX10Ee63HJEp4A1CKxWrQXA8pxuEArIof83CVR1WoP7JY4VrjUCRhvnbuC8XIn2vKfPq9kMyIQCahCfd6vVb_NMWV6CxP0PCH4Ue5id3i0h_WyCIy7wfI-awNxQwAUxlR4zCMy8twvEDF3w5HWBLGWvG4UeObPV3SeLFK898bLRPhFo06aJFZQzsw",
+						"type": "string"
+					}
+				]
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "ExecutiveProducer",
+			"item": [
+				{
+					"name": "/movies",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://lawalcastingagency.herokuapp.com/movies",
+							"protocol": "https",
+							"host": [
+								"lawalcastingagency",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"movies"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/actors",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://lawalcastingagency.herokuapp.com/actors",
+							"protocol": "https",
+							"host": [
+								"lawalcastingagency",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"actors"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/movies",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"title\": \"Matix\", \"release_date\": \"1994-06-12\"}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://lawalcastingagency.herokuapp.com/movies",
+							"protocol": "https",
+							"host": [
+								"lawalcastingagency",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"movies"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/actors",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"name\": \"Angela Valdes\", \"age\": \"35\", \"gender\": \"Female\"}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://lawalcastingagency.herokuapp.com/actors",
+							"protocol": "https",
+							"host": [
+								"lawalcastingagency",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"actors"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/movies",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"title\": \"Matix\", \"release_date\": \"1994-06-20\"}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://lawalcastingagency.herokuapp.com/movies/1",
+							"protocol": "https",
+							"host": [
+								"lawalcastingagency",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"movies",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/actors",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"name\": \"Angela Valdes\", \"age\": \"25\", \"gender\": \"Female\"}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://lawalcastingagency.herokuapp.com/actors/1",
+							"protocol": "https",
+							"host": [
+								"lawalcastingagency",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"actors",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/movies",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 404\", function () {",
+									"    pm.response.to.have.status(404);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://lawalcastingagency.herokuapp.com/fake-movies/37777",
+							"protocol": "https",
+							"host": [
+								"lawalcastingagency",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"fake-movies",
+								"37777"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/actors",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 404\", function () {",
+									"    pm.response.to.have.status(404);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://lawalcastingagency.herokuapp.com/facke-actors/34444",
+							"protocol": "https",
+							"host": [
+								"lawalcastingagency",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"facke-actors",
+								"34444"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"auth": {
+				"type": "bearer",
+				"bearer": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IkVUTFViNlBsRTM5amVRcjRSRnhHWCJ9.eyJpc3MiOiJodHRwczovL2ZzbmQtbGF3YWwuZXUuYXV0aDAuY29tLyIsInN1YiI6ImF1dGgwfDYwODM0NmE0MDY4NmJmMDA3NTgyZjZlOCIsImF1ZCI6Imh0dHA6Ly8xMjcuMC4wLjE6NTAwMCIsImlhdCI6MTYyMzg1NzgyNCwiZXhwIjoxNjIzOTM3ODI0LCJhenAiOiI1Y2R6RDBva1NYaWhzMUtzUU11d1JkNDlzQmNqd3ZxUCIsInNjb3BlIjoiIiwicGVybWlzc2lvbnMiOlsiZGVsZXRlOmFjdG9yIiwiZGVsZXRlOm1vdmllIiwiZ2V0OmFjdG9ycyIsImdldDptb3ZpZXMiLCJwYXRjaDphY3RvciIsInBhdGNoOm1vdmllIiwicG9zdDphY3RvciIsInBvc3Q6bW92aWUiXX0.FW9JzHnb3Y6yclMpB1CaNVYwp1ONzg5l52bfdjW6mAbRR0YjqcXB-mrEBAIM_9l21V9hMwNJREImcIlE_1SmKA8A1OFNGieSDmISZDmgmxgaWm113o9wGVxlSsjMobxPyzJtJzs177Dy2oIyBy9kRePHQE4O5S1_qSe2EkOn5-UxNQJZar6Xaw1IzeG-MegzP6jaqdqUC3Ni9epF8DmjO-1jLr2mMIir1FbFuxn9M4BMlQVmRRgrRASq9qOn2GoLTZ4o7dDKLHIYonrBJ1uZSRAO4Uvf-LkgNWjilEmuGjzeYZT2VT44AXAP7h17arC-V7Pn1z5EueCw3jGXltwHEg",
+						"type": "string"
+					}
+				]
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		}
+	]
+}
